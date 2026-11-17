@@ -1,0 +1,1 @@
+Исправление загрузки Three.js: замените в корне GitHub server.js и package.json, а в папке public — game.js. НЕ перемещайте файлы. Render автоматически выполнит npm install и запустит сервер. После статуса Live обновите игру с Ctrl+F5.

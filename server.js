@@ -7,6 +7,7 @@ import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const app=express();const server=http.createServer(app);const io=new Server(server,{cors:{origin:'*'}});
+app.use('/vendor',express.static(path.join(root,'node_modules','three','build')));
 app.use(express.static(path.join(root,'public')));
 app.get('/health',(req,res)=>res.json({ok:true,players:players.size,mushrooms:mushrooms.length}));
 const DATA=process.env.DATA_DIR||root;const SAVE=path.join(DATA,'players.json');
